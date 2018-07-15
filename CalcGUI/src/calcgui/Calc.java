@@ -1,6 +1,7 @@
 
 package calcgui;
 
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,14 +31,14 @@ public class Calc extends JFrame{
         JLNum1.setText("Enter a Number : ");
         JLNum2.setText("Enter a Number : ");
         JBans.setText("Addition");
-        setLayout(new FlowLayout());
-        setSize(400, 400);
+        this.setLayout(new FlowLayout());
+        this.setSize(400, 400);
         this.add(JLNum1);
-        super.add(TFnum1);
-        add(JLNum2);
-        add(TFnum2);
-        add(JBans);
-        add(TFans);
+        this.add(TFnum1);
+        this.add(JLNum2);
+        this.add(TFnum2);
+        this.add(JBans);
+        this.add(TFans);
         JBans.addActionListener(new ActionListener() {
 
             @Override
@@ -47,12 +48,7 @@ public class Calc extends JFrame{
                         Integer.parseInt(TFnum2.getText())));        
             }
         });
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-    
-    public void add()
-    {
-        
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
